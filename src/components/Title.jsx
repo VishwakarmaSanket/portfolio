@@ -25,13 +25,15 @@ const Title = () => {
           style={{
             WebkitTextStroke: "1px currentColor",
           }}
-          splitBy="lines"
+          splitBy="words"
+          duration={0.8}
         >
           Sanket Vishwakarma
         </TextReveal>
         <TextReveal
           className="text-[1.3rem] tracking-[0.08em] font-normal text-zinc-600 leading-none mt-5  font-sans font-regular uppercase"
           splitBy="words"
+          duration={0.8}
         >
           UX/UI Designer • Creative Full-Stack Developer
         </TextReveal>
