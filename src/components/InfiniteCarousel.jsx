@@ -48,11 +48,11 @@ const InfiniteCarousel = ({ projects }) => {
         ref={trackRef}
         className="track flex items-center"
       >
-        {doubled.map((projects, i) => {
+        {doubled.map((project, i) => {
           return (
             <CarouselCard
               key={i}
-              project={projects}
+              project={project}
               onHoverStart={() => {
                 twinRef.current?.pause();
               }}

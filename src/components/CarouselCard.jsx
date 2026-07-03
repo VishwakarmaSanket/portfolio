@@ -63,7 +63,7 @@ const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
   const { navigateTo } = useViewTransition();
 
   const handleClick = () => {
-    navigateTo(`project/${projects.slug}`);
+    navigateTo(`project/${project.slug}`);
   };
 
   return (
@@ -90,12 +90,12 @@ const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
         className="title_panel absolute z-20  left-0 pointer-events-none flex flex-col gap-[0.6rem]"
       >
         <TextReveal ref={numberRef} trigger="manual" splitBy="chars">
-          <h3 className="font-mono text-[1.5rem] text-black">
+          <h3 className="font-mono text-[1.5rem] text-white">
             {project.number}
           </h3>
         </TextReveal>
         <TextReveal ref={titleRef} trigger="manual" splitBy="lines">
-          <h3 className="font-mono text-[1rem] text-black">{project.title}</h3>
+          <h3 className="font-mono text-[1rem] text-white">{project.title}</h3>
         </TextReveal>
       </div>
 

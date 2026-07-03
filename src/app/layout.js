@@ -1,7 +1,10 @@
 import smoothScroller from "@/components/smoothScroller";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Navbar1 from "@/components/NavBar1";
 
 import { geist, geistMono, instrumentalSerif, cabinet, satoshi } from "./fonts";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Sanket Vishwakarma Portfolio",
@@ -21,7 +24,9 @@ export default function RootLayout({ children }) {
       `}
     >
       <body>
+        <Navbar />
         <smoothScroller>{children}</smoothScroller>
+        <Footer />
       </body>
     </html>
   );

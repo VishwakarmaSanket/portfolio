@@ -10,6 +10,8 @@
 
 body {
   font-family: var(--font-geist);
+  background-color: #121212;
+  color: #ffffff;
 }
 
 @utility flex-center {
@@ -17,5 +19,5 @@ body {
 }
 
 @utility nav-text {
-  @apply font-sans text-[1rem] text-black/80 uppercase font-normal;
+  @apply font-sans text-[1rem] text-white/80 uppercase font-normal;
 }
