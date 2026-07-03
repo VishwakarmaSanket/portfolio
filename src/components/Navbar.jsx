@@ -19,15 +19,18 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef(null);
 
-  useGSAP(() => {
-    gsap.from(headerRef.current, {
-      y: -100,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-      delay: 0.2,
-    });
-  }, { scope: headerRef });
+  useGSAP(
+    () => {
+      gsap.from(headerRef.current, {
+        y: -100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        delay: 0.2,
+      });
+    },
+    { scope: headerRef },
+  );
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -36,7 +39,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header ref={headerRef} className="fixed top-4 left-1/2 z-50 w-full max-w-6xl -translate-x-1/2 px-4">
+    <header
+      ref={headerRef}
+      className="fixed top-4 left-1/2 z-50 w-full max-w-6xl -translate-x-1/2 px-4"
+    >
       <nav
         className={`
           grid grid-cols-3 items-center
@@ -55,7 +61,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link href="/" className="group">
             <Image
-              src="/SV1.png"
+              src="/sv1.png"
               alt="SV Logo"
               width={36}
               height={36}
